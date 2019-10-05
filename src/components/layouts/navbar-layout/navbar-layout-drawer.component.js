@@ -1,9 +1,11 @@
 import React from 'react';
-
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import IconButton from '@material-ui/core/IconButton';
 import classes from './navbar-layout.module.scss';
 import drawerClasses from './navbar-layout-drawer.module.scss';
+import {Card} from './card/navbar-layout-drawer-card.component';
+
+
 
 export const NavbarLayoutDrawer = ({ onDrawerClose }) => {
   return (
@@ -13,13 +15,7 @@ export const NavbarLayoutDrawer = ({ onDrawerClose }) => {
           <ChevronLeftIcon />
         </IconButton>
       </div>
-      <p>Hello</p>
-      <p>Hello</p>
-      <p>Hello</p>
-      <p>Hello</p>
-      <p>Hello</p>
-      <p>Hello</p>
-      <p>Hello</p>
+      <Card />
     </div>
   );
 };
