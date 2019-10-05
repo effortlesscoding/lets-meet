@@ -41,9 +41,10 @@ export const NavbarLayout = ({ children, title, drawer }) => {
       </AppBar>
       <nav className={classes.drawer} aria-label="content area">
         <Drawer open={isDrawerOpen} variant="persistent">
-          {drawer || <NavbarLayoutDrawer onDrawerClose={() => handleDrawerToggle(false)} />}
+          <NavbarLayoutDrawer drawer={drawer || null} onDrawerClose={() => handleDrawerToggle(false)} />
         </Drawer>
         <main
+          id="main-navbar-content"
           className={clsx(classes.content, {
             [classes.contentShift]: isDrawerOpen
           })}

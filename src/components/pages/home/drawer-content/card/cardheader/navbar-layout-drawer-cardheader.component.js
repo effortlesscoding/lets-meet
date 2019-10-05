@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './navbar-layout-drawer-cardheader.module.scss';
 
 export const CardHeader = (props) => {
-  console.log(props.name);
   var style = {
     backgroundImage: `url(${require('@/assets/images/avatar.jpeg')})`
   };
