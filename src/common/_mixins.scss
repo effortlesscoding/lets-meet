@@ -1,0 +1,39 @@
+$xs-breakpoint: 600px;
+$sm-breakpoint: 960px;
+
+$md-breakpoint: 1280px;
+$lg-breakpoint: 1920px;
+$xl-breakpoint: 9999px;
+
+@mixin breakpoint($point) {
+  @if $point == xs-up {
+    @media (min-width: $xs-breakpoint) { @content; }
+  }
+  @else if $point == xs-down {
+    @media (max-width: $xs-breakpoint) { @content; }
+  }
+  @else if $point == sm-up {
+    @media (min-width: $sm-breakpoint) { @content; }
+  }
+  @else if $point == sm-down {
+    @media (max-width: $sm-breakpoint) { @content; }
+  }
+  @else if $point == md-up {
+    @media (min-width: $md-breakpoint) { @content; }
+  }
+  @else if $point == md-down {
+    @media (max-width: $md-breakpoint) { @content; }
+  }
+  @else if $point == lg-up {
+    @media (min-width: $lg-breakpoint) { @content; }
+  }
+  @else if $point == lg-down {
+    @media (max-width: $lg-breakpoint) { @content; }
+  }
+  @else if $point == xl-up {
+    @media (min-width: $xl-breakpoint) { @content; }
+  }
+  @else if $point == xl-down {
+    @media (max-width: $xl-breakpoint) { @content; }
+  }
+}
