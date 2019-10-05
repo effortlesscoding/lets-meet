@@ -1,0 +1,48 @@
+@import '../../../common/mixins';
+
+.projectsWrapper {
+  display: block;
+  margin-top: 1rem;
+}
+
+.singleProject {
+  display: block;
+  margin-top: 1rem;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 2rem;
+}
+
+div.listIcon {
+  min-width: 32px !important;
+  color: teal;
+}
+
+.titleWrapper {
+  display: flex;
+  .titleAvatar {
+    background-size: cover;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: grey;
+    object-fit: cover;
+  }
+  .titleWrapperInner {
+    margin-left: .5rem;
+  }
+}
+
+@include breakpoint(md-up) {
+  .singleProject {
+    display: flex;
+    .responsibilities {
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+  
+    .technologies {
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+  }
+}
