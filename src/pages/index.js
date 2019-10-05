@@ -5,10 +5,13 @@ import SEO from "@/components/seo"
 import { NavbarLayout } from "@/components/layouts"
 
 const IndexPage = () => (
-  <NavbarLayout>
+  <>
     <SEO title="Home" />
-    <Homepage />
-  </NavbarLayout>
+    <NavbarLayout title="Highly Skilled React Front-End Developer">
+      
+      <Homepage  />
+    </NavbarLayout>
+  </>
 )
 
 export default IndexPage

@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Homepage = () => {
-  return <p>LOL</p>;
+  return <p>Content</p>;
 };

@@ -1,16 +1,41 @@
+$drawer-size: 240px;
+
 .menuButton {
   margin-right: 2rem;
 }
 
 .titleWrapper {
-  flex-grow: 1;
-}
-
-.content {
-  flex-grow: 1;
-  padding: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .drawerPaper {
-  
+  position: relative;
+}
+
+.drawer {
+  width: $drawer-size;
+}
+
+header.appBar {
+  transition: margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+
+header.appBarShift {
+  width: calc(100% - #{$drawer-size});
+  margin-left: $drawer-size;
+  transition: margin 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,width 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms
+}
+
+main.content {
+  width: 100vw;
+  padding: 1rem;
+  transition: margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+
+main.contentShift {
+  width: calc(100vw - #{$drawer-size});
+  margin-left: $drawer-size;
+  transition: margin 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,width 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
 }
