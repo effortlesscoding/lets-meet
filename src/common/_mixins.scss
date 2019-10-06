@@ -1,3 +1,4 @@
+$xxs-breakpoint: 450px;
 $xs-breakpoint: 600px;
 $sm-breakpoint: 960px;
 
@@ -6,7 +7,13 @@ $lg-breakpoint: 1920px;
 $xl-breakpoint: 9999px;
 
 @mixin breakpoint($point) {
-  @if $point == xs-up {
+  @if $point == xxs-up {
+    @media (min-width: $xxs-breakpoint) { @content; }
+  }
+  @else if $point == xxs-down {
+    @media (max-width: $xxs-breakpoint) { @content; }
+  }
+  @else if $point == xs-up {
     @media (min-width: $xs-breakpoint) { @content; }
   }
   @else if $point == xs-down {

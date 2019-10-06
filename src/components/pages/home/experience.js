@@ -80,7 +80,7 @@ export const experience = [
         duration: '2018-2019',
         title: 'React & Node.js application',
         responsibilities: [
-          'Pixel Perfect design implementation under extremely strict design requirements and deadlines',
+          'Pixel-perfect design implementation under extremely strict design requirements and deadlines',
           'Integration with Google Maps',
           'Unit tests',
           'Close collaboration with stakeholders and backend developers',

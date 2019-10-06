@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import List from '@material-ui/core/List';
@@ -10,7 +10,6 @@ import classes from './project-card.module.scss';
 import { HomeContext } from '../../pages/home/home.context';
 
 export const ProjectCard = (props) => {
-  const [ ref, setRef ] = useState(null);
   return (
     <HomeContext.Consumer>
       {({ scrollListener }) => {
@@ -21,7 +20,6 @@ export const ProjectCard = (props) => {
             ref={(r) => {
               if (r && scrollListener) {
                 scrollListener.registerListener(r);
-                setRef(r);
               }
             }}
           >

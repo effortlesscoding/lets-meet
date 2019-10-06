@@ -5,6 +5,8 @@ import { DrawerContent } from './drawer-content';
 import { NavbarLayout } from '../../layouts';
 import { HomeContext } from './home.context';
 import { ScrollListenerService } from '../../../services/scroll-listener.service';
+import { HomeHead } from './home-head/home-head.component';
+import Divider from '@material-ui/core/Divider';
 
 export const Homepage = () => {
   const [scrollListener, setScrollListener] = useState();
@@ -14,11 +16,15 @@ export const Homepage = () => {
       scrollListener.startListening();
       setScrollListener(scrollListener);
     }
-  }, []);
+  }, [scrollListener]);
 
   return (
     <HomeContext.Provider value={{ scrollListener, }}>
-      <NavbarLayout drawer={<DrawerContent />} title="Highly Skilled React Front-End Developer">
+      <NavbarLayout drawer={<DrawerContent />} title="My Job Experience Below">
+        <HomeHead />
+        <br/>
+        <Divider />
+        <br/>
         <div>
           {experience.map((e) => <ProjectCard key={e.id} {...e} />)}
         </div>
