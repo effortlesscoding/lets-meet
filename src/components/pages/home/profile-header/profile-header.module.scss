@@ -1,0 +1,27 @@
+.cardHeader {
+  height: 200px;
+  width: 100%;
+  padding: 15px;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+}
+
+.cardHeaderTitle {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cardBottomArea {
+  flex-grow: 1;
+  align-items: flex-end;
+  display: flex;
+  &>p {
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 0 .5rem;
+    margin: 0 -.5rem;
+    font-weight: bold;
+  }
+}

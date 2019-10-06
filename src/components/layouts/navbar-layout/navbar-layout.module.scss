@@ -1,4 +1,5 @@
 $drawer-size: 240px;
+$appbar-height: 94px;
 
 .menuButton {
   margin-right: 2rem;
@@ -32,6 +33,7 @@ main.content {
   width: 100vw;
   padding: 1rem;
   padding-bottom: 4rem;
+  padding-top: $appbar-height;
   transition: margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
 }
 

@@ -13,11 +13,11 @@ import classes from './navbar-layout.module.scss';
 import { NavbarLayoutDrawer } from './navbar-layout-drawer.component';
 
 export const NavbarLayout = ({ children, title, drawer }) => {
-  const [ isDrawerOpen, handleDrawerToggle ] = useState(true);
+  const [ isDrawerOpen, handleDrawerToggle ] = useState(window.innerWidth >= 960);
   return (
     <Box>
       <AppBar
-        position="static"
+        position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: isDrawerOpen
         })}

@@ -6,6 +6,7 @@ module.exports = {
     description: `Hire a highly skilled React develop with infectious personality.`,
     author: `@effortlesscoding`,
   },
+  pathPrefix: "/lets-meet",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

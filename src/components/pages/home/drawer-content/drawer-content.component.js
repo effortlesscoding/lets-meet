@@ -3,9 +3,11 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Divider from '@material-ui/core/Divider';
 import ListItemText from '@material-ui/core/ListItemText';
-import {Card} from './card/navbar-layout-drawer-card.component';
+import Avatar from '@material-ui/core/Avatar';
 import {experience} from '../experience';
 import { HomeContext } from '../home.context';
+import classes from './drawer-content.module.scss';
+import Typography from '@material-ui/core/Typography';
 
 const ExperienceLink = ({ scrollListener, experience }) => {
   const [isActive, setActive] = useState(false);
@@ -16,16 +18,14 @@ const ExperienceLink = ({ scrollListener, experience }) => {
     scrollListener.registerSubscriber({
       id: experience.id,
       announce: (scrollId) => {
-        console.log('announce!', scrollId);
         if (scrollId === experience.id) {
-          console.log('Set to active!');
           setActive(true);
         } else {
           setActive(false);
         }
       }
     });
-  }, [scrollListener]);
+  }, [experience.id, scrollListener]);
 
   const handleClick = (e) => {
     if (!scrollListener) {
@@ -36,6 +36,7 @@ const ExperienceLink = ({ scrollListener, experience }) => {
   }
   return (
     <ListItem button key={experience.id} selected={isActive} onClick={handleClick}>
+      <Avatar classes={{ root: classes.avatar }} src={experience.companyLogo} />
       <ListItemText primary={experience.company} secondary={experience.roleTitle} />
     </ListItem>
   );
@@ -48,8 +49,9 @@ export const DrawerContent = () => {
         ({ scrollListener }) => {
           return (
             <>
-              {/* <Card /> */}
+              {/* <ProfileContacts /> */}
               <Divider />
+              <Typography className={classes.title} variant="h5">Work History</Typography>
               <List component="nav" aria-label="quick links to experience">
                 {
                   experience.map(_experience => (
