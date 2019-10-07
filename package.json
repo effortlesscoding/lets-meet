@@ -1,5 +1,5 @@
 {
-  "name": "effortless-coding-lets-meet",
+  "name": "effortless-coding-react-developer",
   "private": true,
   "description": "Lets meet Effortless Coding",
   "version": "0.1.0",
@@ -27,7 +27,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-swipeable-views": "^0.13.3"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",

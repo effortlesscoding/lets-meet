@@ -19,7 +19,6 @@ export class ScrollListenerService {
     const element = this.elements[id];
     if (element) {
       window.scrollTo({ top: element.offsetTop, behavior: 'smooth' });
-      console.log('this.subscribers::', this.subscribers);
       values(this.subscribers).forEach(subscriber => {
         subscriber.announce(id);
       });

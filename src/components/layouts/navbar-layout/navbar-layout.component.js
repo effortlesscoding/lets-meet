@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -13,7 +13,12 @@ import classes from './navbar-layout.module.scss';
 import { NavbarLayoutDrawer } from './navbar-layout-drawer.component';
 
 export const NavbarLayout = ({ children, title, drawer }) => {
-  const [ isDrawerOpen, handleDrawerToggle ] = useState(window.innerWidth >= 960);
+  const [ isDrawerOpen, handleDrawerToggle ] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth > 960) {
+      handleDrawerToggle(true);
+    }
+  }, []);
   return (
     <Box>
       <AppBar

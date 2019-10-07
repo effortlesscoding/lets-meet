@@ -1,6 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMailBulk, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faMailBulk, faDownload, faMapMarker } from '@fortawesome/free-solid-svg-icons';
+
+export const mainItems = [{
+  id: 1,
+  text: 'Melbourne, Australia',
+  icon: <FontAwesomeIcon icon={faMapMarker} />
+}]
 
 export const keyStrengths = [{
   id: 1,

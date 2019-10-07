@@ -2,5 +2,11 @@
 
 .drawerHeader {
   margin: .5rem;
-  text-align: right;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  >p {
+    flex-grow: 1;
+    color: #898989;
+  }
 }

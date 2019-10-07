@@ -1,0 +1,41 @@
+@import '../../../../common/mixins';
+
+.slideCard {
+  min-height: 20rem;
+}
+
+.showreelContainer {
+  position: relative;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  background: linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+  color: #fff;
+  .fabLeft {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    background-color: transparent;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .fabRight {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    background-color: transparent;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@include breakpoint(md-up) {
+  .showreelContainer {
+    padding: 0 3rem;
+  }
+}
